@@ -364,7 +364,8 @@ FodyWeavers.xsd
 
 #Visual Studion
 .vsconfig
+
 #Unity
 Library/
 Temp/
-Assets/NuGet/
+data/*.json

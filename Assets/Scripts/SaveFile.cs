@@ -6,12 +6,13 @@ using System.Text.Json;
 
 public class SaveFile 
 {
+    private readonly string _FILEPATH = "./data/";
     private readonly string _SaveFileName;
     private SaveData _SaveData;
 
     public SaveFile(string name, string filename)
     {
-        _SaveFileName = filename;
+        _SaveFileName = _FILEPATH + filename;
         _SaveData = new SaveData(name);
         Save();
     }
