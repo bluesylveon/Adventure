@@ -20,6 +20,7 @@ public class SaveFile
 
     public void Save()
     {
+        //todo: check if folder exist
         string jsonString = JsonSerializer.Serialize(_SaveData);
         File.WriteAllText(_SaveFileName, jsonString);
     }
