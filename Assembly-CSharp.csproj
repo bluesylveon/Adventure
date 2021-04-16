@@ -64,13 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GrassTile.cs" />
+    <Compile Include="Assets\Scripts\Flower.cs" />
+    <Compile Include="Assets\Scripts\FlowerData.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
-    <Compile Include="Assets\Scripts\MapGrid.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\SaveFile.cs" />
-    <Compile Include="Assets\Scripts\ScriptedTileMap.cs" />
-    <Compile Include="Assets\Scripts\Walking.cs" />
+    <Compile Include="Assets\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -254,26 +257,26 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json">
-      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Text.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encodings.Web">
-      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
       <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>D:/School/Session 6/Adventure/Adventure/Assets/Plugins/Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -1,40 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject grid;
-
-
+    [SerializeField] private Player player;
+    [SerializeField] private Flower flower;
     public GameObject box;
-
-
-    private SaveFile savefile;
-
+    private Camera _camera;
 
     void Start()
     {
-        savefile = new SaveFile("Player 1", "data.json");
-        Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
-        Instantiate(grid, new Vector3(0, 0, 0), Quaternion.identity);
-
-        savefile.Save();
-
-
-
-        //Instantiate(box, new Vector3(1, 1, 0), Quaternion.identity);
-
-
-
+        PlayerData data = SaveFile.Instance.GetPlayer();
+        Instantiate(player, new Vector3(data._Position.x, data._Position.y, 0), Quaternion.identity);
+        Instantiate(flower, new Vector3(2, 2, 0), Quaternion.identity);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+       
     }
-
-
 }
