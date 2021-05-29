@@ -2,17 +2,19 @@
 using System.Text.Json;
 
 [Serializable]
-public class FlowerData 
+public class CollectibleData
 {
     public bool _IsCollected { get; set; }
 
     public int _Id { get; set; }
 
-    public FlowerData(Flower flower) {
-        _IsCollected = flower._isCollected;
+    public CollectibleData(Collectible collectible)
+    {
+        _IsCollected = collectible._isCollected;
+        _Id = collectible._id;
     }
 
-    public FlowerData()
+    public CollectibleData()
     {
         _IsCollected = false;
     }
@@ -21,5 +23,4 @@ public class FlowerData
     {
         return JsonSerializer.Serialize(this);
     }
-
 }

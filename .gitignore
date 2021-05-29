@@ -370,3 +370,4 @@ Library/
 Temp/
 Build/
 data/*.gd
+TestFolder/

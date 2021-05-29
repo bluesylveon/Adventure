@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
@@ -20,7 +17,7 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         }
         else
         {
-            _instance = (T) this;
+            _instance = (T)this;
         }
     }
 

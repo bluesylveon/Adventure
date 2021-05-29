@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WalkUp
+  m_Name: Luna
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,16 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7043811978007918041, guid: 23748c298f885bf4c89671f6d30f562b,
+      value: {fileID: -1940738496428130850, guid: 2f90eb840bd0cf4438d49759bc08d718,
         type: 3}
-    - time: 0.083333336
-      value: {fileID: -7723253972256136601, guid: 23748c298f885bf4c89671f6d30f562b,
-        type: 3}
-    - time: 0.16666667
-      value: {fileID: -1137364592071911362, guid: 23748c298f885bf4c89671f6d30f562b,
-        type: 3}
-    - time: 0.25
-      value: {fileID: -3549988229105279555, guid: 23748c298f885bf4c89671f6d30f562b,
+    - time: 0.41666666
+      value: {fileID: -6131185593638097393, guid: 2f90eb840bd0cf4438d49759bc08d718,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -50,16 +44,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7043811978007918041, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
-    - {fileID: -7723253972256136601, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
-    - {fileID: -1137364592071911362, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
-    - {fileID: -3549988229105279555, guid: 23748c298f885bf4c89671f6d30f562b, type: 3}
+    - {fileID: -1940738496428130850, guid: 2f90eb840bd0cf4438d49759bc08d718, type: 3}
+    - {fileID: -6131185593638097393, guid: 2f90eb840bd0cf4438d49759bc08d718, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 [Serializable]
 public class EventGameState : UnityEvent<GameManager.GameState, GameManager.GameState>
@@ -15,12 +13,12 @@ public class GameManager : Singleton<GameManager>
 {
     public enum GameState
     {
+        MainMenu,
         Running,
-        Pause,
-        Inventory
+        Pause
     }
 
-    private GameState _currentGameState = GameState.Running;
+    private GameState _currentGameState = GameState.MainMenu;
     [SerializeField] public EventGameState onGameStateChange;
     private List<AsyncOperation> _loadOperations;
 
@@ -34,9 +32,6 @@ public class GameManager : Singleton<GameManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             TogglePause();
-        //TODO: REMOVE
-        if (Input.GetKeyDown(KeyCode.L))
-            LoadLevel("Level2");
     }
 
     public void Save()
@@ -44,7 +39,6 @@ public class GameManager : Singleton<GameManager>
         SaveFile.Instance.Save();
     }
 
-    //TODO: ???
     public void LoadLevel(string levelName)
     {
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
@@ -83,7 +77,7 @@ public class GameManager : Singleton<GameManager>
             case GameState.Pause:
                 Time.timeScale = 0.0f;
                 break;
-            case GameState.Inventory:
+            case GameState.MainMenu:
                 Time.timeScale = 0.0f;
                 break;
 
@@ -96,8 +90,8 @@ public class GameManager : Singleton<GameManager>
 
     public void Quit()
     {
-        print("quit success");
         Application.Quit();
+        Debug.Log("Le jeu ce fermerai ici en mode Build");
     }
 
     public void TogglePause()

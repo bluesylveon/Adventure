@@ -2,34 +2,37 @@
 using UnityEngine;
 
 [Serializable]
-public class Flower : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
     public bool _isCollected { get; set; }
+    public int _id { get; set; }
     void Start()
     {
         GetData();
-
         if (_isCollected)
-        {
-            PutInInventory();
-        }
-     }
+            Destroy(gameObject);
+    }
 
     private void GetData()
     {
-        FlowerData data = SaveFile.Instance.GetFlower();
+        CollectibleData data = SaveFile.Instance.GetCollectibleDataById(_id);
         this._isCollected = data._IsCollected;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PutInInventory();
+        if (collision.CompareTag("Player"))
+            PutInInventory();
     }
 
     private void PutInInventory()
     {
         _isCollected = true;
-        SaveFile.Instance.SetFlower(this);
         Destroy(gameObject);
+    }
+
+    public override string ToString()
+    {
+        return "[isCollected: " + _isCollected + "],";
     }
 }

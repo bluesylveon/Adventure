@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.Text.Json;
 
 [Serializable]
-public class PlayerData 
+public class PlayerData
 {
     [Serializable]
     public class PlayerPosition
@@ -19,7 +17,6 @@ public class PlayerData
             this.y = position.y;
         }
 
-
         public PlayerPosition()
         {
             this.x = 0;
@@ -30,14 +27,17 @@ public class PlayerData
         {
             return JsonSerializer.Serialize(this);
         }
-
     }
+
     public PlayerPosition _Position { get; set; }
 
-    public PlayerData(Vector3 position) {
+    public PlayerData(Vector3 position)
+    {
         this._Position = new PlayerPosition(position);
     }
-    public PlayerData() {
+
+    public PlayerData()
+    {
         this._Position = new PlayerPosition();
     }
 
